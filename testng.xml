@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--    thread-count > 1 Because if it is =1 as in example, it was run in parallel,     -->
+<!--        but second process wait until finished the first     -->
+<suite thread-count="2" verbose="1" annotations="JDK" name="All Test Suite" parallel="tests">
+    <test name="Newegg">
+        <classes>
+            <class name="com.suite1.Newegg"/>
+        </classes>
+    </test>
+    
+    <test name="DealNews">
+        <classes>
+            <class name="com.suite2.DealNews"></class>
+        </classes>
+    </test>
+</suite>
